@@ -47,10 +47,10 @@ void Graph::output()
 	for(int i=0;i<n;i++)
 	{
 		cout<<"\n";
-		fot(int j=0;j<n;j++)
-		(
-			cout<<a[i][j]<<endll;
-		)
+		for(int j=0;j<n;j++)
+		{
+			cout<<a[i][j]<<endl;
+	}
 	}
 }
 
@@ -78,10 +78,10 @@ void Graph::BFS()
 	{
 		for (int i =0;i<n;i++)
 		{
-			if (a[current][i]!=0 && visit[i]==o)
+			if (a[current][i]!=0 && visit[i]==0)
 			{
 				visit [i]=1;
-				q.add(i);
+				q.push(i);
 				cout<<city[i]<<endl;
 			}
 		}
@@ -105,7 +105,7 @@ int main ()
 	Graph g1;
 	int choice;
 	cout<<"1. input \n 2. diaplay\n 3. bfs"<<endl;
-	cout <<"enter your choice"
+	cout <<"enter your choice";
 	cin>>choice;
 	switch(choice)
 	{
@@ -119,26 +119,6 @@ int main ()
 			g1.BFS();
 			break;
 		default :
-			cout<<"invalid choice"
+			cout<<"invalid choice";
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
